@@ -19,6 +19,7 @@ let index = 0
 let playing = false
 let intervalTime
 let intervalCurrent
+audio.volume = 0.5
 
 const finish=()=>{
     if (audio.currentTime == audio.duration && index != (listMusic.length - 1)) {
