@@ -12,6 +12,8 @@ const next = document.getElementById('next')
 const currentTime = document.getElementById('current-time')
 const durationTime = document.getElementById('duration-time')
 const progress = document.getElementById('progress')
+const repeat = document.getElementById('repeat')
+const random = document.getElementById('random')
 
 let index = 0
 let playing = false
@@ -19,7 +21,6 @@ let intervalTime
 let intervalCurrent
 
 const finish=()=>{
-    console.log('intervando')
     if (audio.currentTime == audio.duration && index != (listMusic.length - 1)) {
         index++
         showData(index)
@@ -88,6 +89,16 @@ back.addEventListener('click', ()=>{
         showData(index)
         validationPlay()
     }
+})
+
+repeat.addEventListener('click', ()=>{
+    audio.currentTime = 0
+})
+
+random.addEventListener('click', ()=>{
+    const number = Math.floor(Math.random() * listMusic.length)
+    showData(number)
+    validationPlay()
 })
 
 const validationPlay=()=>{
