@@ -19,7 +19,7 @@ let intervalTime
 let intervalCurrent
 
 const finish=()=>{
-    console.log('intervando') 
+    console.log('intervando')
     if (audio.currentTime == audio.duration && index != (listMusic.length - 1)) {
         index++
         showData(index)
