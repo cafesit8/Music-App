@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Música</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="app">
+        <div class="app__header">
+            <div class="app__details">
+                <h1 id="title"></h1>
+                <h3 id="singer"></h3>
+            </div>
+            <div class="app__img">
+                <figure>
+                    <img id="img" src="" alt="">
+                </figure>
+            </div>
+        </div>
+        <div class="app__controls">
+            <div class="app__timer">
+                <div class="app__progress">
+                    <audio id="audio" src=""></audio>
+                    <input type="range" value="0" id="progress">
+                </div>
+                <div class="app__time">
+                    <h6 id="current-time">00:00</h6>
+                    <h6 id="duration-time">00:00</h6>
+                </div>
+            </div>
+            <div class="app__botons">
+                <ion-icon id="random" name="shuffle"></ion-icon>
+                <ion-icon id="back" name="chevron-back"></ion-icon>
+                <div id="play" class="play"><ion-icon id="play-icon" name="play"></ion-icon></div>
+                <ion-icon id="next" name="chevron-forward"></ion-icon>
+                <ion-icon id="repeat" name="repeat"></ion-icon>
+            </div>
+        </div>
+    </div>
+    <script src="main.js" type="module"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

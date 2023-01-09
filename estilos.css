@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Handlee&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:wght@300;400;500;600&family=Rubik:wght@300;400;500&family=Satisfy&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.app{
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    font-family: 'Open Sans', sans-serif;
+    background-image: linear-gradient(to right top, #000066, #56006a, #870068, #b10060, #d30056, #e6284b, #f4453f, #ff6030, #ff7b22, #ff9511, #ffae00, #ffc700);
+}
+
+.app__header{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.app__details{
+    width: 100%;
+    text-align: center;
+    color: #fff;
+}
+
+.app__details h1{
+    font-size: 22px;
+}
+
+.app__details h3{
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.705);
+}
+
+.app__img{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.app__img figure{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.app__img.active figure{
+    animation: giro infinite 10s linear;
+}
+@keyframes giro {
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.app__img figure img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.app__controls{
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 20px;
+}
+
+input[type='range'] {
+    display: block;
+    width: 85%;
+    cursor: pointer;
+  }
+  
+  input[type='range']:focus {
+    outline: none;
+  }
+  
+  input[type='range'],
+  input[type='range']::-webkit-slider-runnable-track,
+  input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none;
+  }
+
+  input[type=range]::-webkit-slider-thumb {
+    background-color: rgb(255, 255, 255);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-top: -8px;
+  }
+
+  input[type=range]::-webkit-slider-runnable-track {
+    background-color: #fff;
+    height: 4px;
+  }
+
+.app__progress{
+    width: 100%;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.app__timer{
+    width: 100%;
+}
+
+.app__time{
+    color: rgba(255, 255, 255, 0.808);
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
+    margin: auto;
+}
+
+.app__botons{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.app__botons ion-icon{
+    color: #fff;
+    font-size: 27px;
+    cursor: pointer;
+}
+
+.app__botons .play{
+    background-color: rgba(255, 255, 255, 0.25);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+/* 
+.app__botons .play ion-icon{
+    margin-left: 3px;
+} */
